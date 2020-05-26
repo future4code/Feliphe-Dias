@@ -1,0 +1,32 @@
+body { background-color: #333; color: white;}
+
+a {
+    background-color:#333;
+    border: solid 1px black;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 4px;
+    text-decoration: none;
+    color:white;
+}
+
+img[alt="amy-santiago"]{ width: 16%;}
+
+img[alt="rosa"]{ width:16%;}
+
+.jake{
+    margin: 8px;
+}
+
+.amy { 
+    margin-left:32px;
+}
+
+li.rosa{
+    margin-left: 42px;
+}
+
+li {
+    display: inline;
+    margin: 8px;
+}
