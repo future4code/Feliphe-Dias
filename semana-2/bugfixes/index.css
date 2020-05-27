@@ -67,12 +67,21 @@ div img {
   **/
 
 #container-de-descricao {
+    position: relative;
     background-color: #2274a5;
     color: white;
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
+}
+
+#container-de-descricao > div{
+    position: absolute;
+    top: 0;
+    margin-top: 3%;
+    width: 100%;
+    text-align: center;
 }
 
 #container-para-comprar {
