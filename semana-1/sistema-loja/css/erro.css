@@ -1,0 +1,20 @@
+
+*{background-color: #888888;}
+
+h1{ text-align: center;}
+
+a {
+    background-color:#333;
+    border: solid 1px black;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 4px;
+    text-decoration: none;
+    color:white;
+}
+
+img{ 
+    display: block;
+    margin: auto;
+    padding: auto;
+}
