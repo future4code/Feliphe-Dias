@@ -114,6 +114,7 @@ div:last-child {
 
 table {
     width: 60%;
+    margin: auto;
 }
 
 td button {
@@ -129,6 +130,10 @@ td button {
     height: 100px;
 }
 
+td > img {
+    width: 50px;
+    height: 50px;
+}
 
 #back-button {
     background-color: white;
