@@ -116,6 +116,11 @@ div:last-child {
     text-align: center;
 }
 
+input[name="search"]{
+    border:none;
+    border-bottom: solid 3px black;
+}
+
 table {
     width: 60%;
     margin: auto;
