@@ -77,8 +77,10 @@ div img {
     color: white;
 }
 
-#container-de-descricao>ol {
-    padding: 15px 0px;
+div > ol{
+    padding: 0px 540px;
+    margin: 1%;
+    
 }
 
 #container-de-descricao > div{
@@ -101,7 +103,7 @@ div img {
 
 a[href="comprar.html"] {
     display: block;
-    margin: auto;
+    margin: 1% auto;
     width: fit-content;
 }
 
