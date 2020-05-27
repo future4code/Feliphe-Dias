@@ -25,6 +25,10 @@ button:focus {
     color: white;
 }
 
+button:hover{
+    filter: contrast(30%);
+}
+
 img {
     width: 100px;
 }
