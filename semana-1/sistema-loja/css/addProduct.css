@@ -1,0 +1,31 @@
+body { 
+    background-color: #c2c2c2;
+}
+
+a {
+    background-color:#333;
+    border: solid 1px black;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    padding: 4px;
+    text-decoration: none;
+    color:white;
+}
+
+
+h1{ text-align: center;}
+
+form { 
+    border: solid 1px #333;
+    padding: 8px; 
+    border-radius: 4px; 
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+}
+
+input[type="submit"]{ 
+    padding: 8px 16px;
+    border:none;
+    border-radius: 8px;
+}

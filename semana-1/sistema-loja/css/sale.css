@@ -1,0 +1,91 @@
+* {
+     
+    padding: 0;
+}
+
+body { 
+    background-color: rgba(197, 197, 197, 0.74) ;
+    color: black;
+}
+
+
+a {
+    background-color:#333;
+    border: solid 1px black;
+    margin-top: 8px;
+    text-decoration: none;
+    color:white;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+section { 
+    display: flex;
+    flex-flow: column wrap; 
+}
+
+.wrap{
+    margin-top: 32px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: initial;    
+    overflow: auto;
+}
+
+/* border radius não funciona no table --- ajuda */
+table{
+    border: solid 3px #333;
+    border-collapse: collapse;
+    font-size: 16px;
+    box-shadow: 16px 16px #888888;    
+}
+
+table.salesForm {
+  margin-right:30%;
+}
+
+tr.otherTrColor{
+    background-color: #333;
+    color: white;
+    
+}
+
+tr:hover{
+    background-color: red;
+}
+
+
+.wrapDois{
+    display: flex;
+    flex: row wrap;
+    justify-items: center;
+    justify-content: initial;
+    align-items: baseline;
+}
+
+button{
+    text-align: center;
+    width: 64px;
+    height: 32px;
+    margin-right: 34%;
+    margin-left: 8px;
+}
+
+label[for="debit"]{
+    margin-left: 8px;
+}
+
+label[for="credit"]{
+    margin-left: 8px;
+}
+
+input[type="submit"]{
+    margin-left: 24px;
+    width: 64px;
+    height: 32px;
+}
+

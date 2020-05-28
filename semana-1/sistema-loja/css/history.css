@@ -1,0 +1,32 @@
+*{
+    margin: 8px 0px;
+}
+
+body{ 
+    background-color: #333;
+}
+
+
+a {
+    background-color:#333;
+    border: solid 1px black;
+    margin:0px 4px;
+    padding: 4px;
+    text-decoration: none;
+    color:white;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+    background-color: #c2c2c283;
+    padding: 24px;
+    color: white;
+}
+
+table{
+    margin: 24px;
+    background-color: #c2c2c283 ;
+}
