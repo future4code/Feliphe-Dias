@@ -22,6 +22,15 @@
         height:19%;
     }
 
+    div.boxContentThird{
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: space-around;
+        height:30%;
+    }
+
+
     div.boxOne{
         width: 90%;
         height: 15%;
@@ -74,30 +83,28 @@
 
     div.boxTen{
         width: 90%;
-        height:15%;
+        height:30%;
     }
 
     div.boxNine{
-        width: 45%;
-        height:40%;
+        width: 90%;
+        height:30%;
     }
 
 
     div.boxEleven{
-        width: 95%;
-        height:40%;
+        width: 90%;
+        height:30%;
     }
 
 }
 
-@media screen and (min-device-width : 421px) and (max-device-width : 800px) {
-    
-    div.column {
-        display:none;
+@media screen and (min-device-width : 421px) and (max-device-width : 619px){
+    div.column{
+        display: none;
     }
 
     div.content{
-        width:100%;
         height: 130%;
     }
 
@@ -114,7 +121,7 @@
         justify-content: space-evenly;
         align-content: space-around;
         height:35%;
-    }
+    } 
 
     div.boxContentSecond{
         height:40%;
@@ -150,7 +157,7 @@
         width: 45%;
         height: 20%;
         order:5;
-      
+        
     }
     div.boxSix{
         height: 26%;
@@ -158,7 +165,7 @@
         order:6;
         background-color: green;
     }
-
+    
     div.boxTen{
         width: 45%;
         height:40%;
@@ -168,11 +175,160 @@
         width: 45%;
         height:40%;
     }
-
+    
 
     div.boxEleven{
         width: 95%;
         height:40%;
     }
+
+}
+
+@media screen and (min-device-width : 620px) and (max-device-width : 700px){
+    div.column{
+        height: 202%;
         
+    }
+
+    div.content{
+        height: 130%;
+    }
+
+    div.boxContentFirst{
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        height: 70%;
+        
+    }
+
+    div.boxContentThird{
+        justify-content: space-evenly;
+        align-content: space-around;
+        height:35%;
+    } 
+
+    div.boxContentSecond{
+        height:40%;
+    }
+
+    div.boxOne{
+        width: 45%;
+        height: 20%;
+        order: 1;
+    }
+
+    div.boxTwo{
+       
+        width: 45%;
+        height: 20%;
+        order:2;
+    }
+
+    div.boxThree{
+        height: 26%;
+        width: 95%;
+        order:3;
+        background-color: green;
+    }
+
+    div.boxFor{
+        width: 45%;
+        height: 20%;
+        order:4;
+    }
+
+    div.boxFive{
+        width: 45%;
+        height: 20%;
+        order:5;
+        
+    }
+    div.boxSix{
+        height: 26%;
+        width: 95%;
+        order:6;
+        background-color: green;
+    }
+    
+    div.boxTen{
+        width: 45%;
+        height:40%;
+    }
+
+    div.boxNine{
+        width: 45%;
+        height:40%;
+    }
+    
+
+    div.boxEleven{
+        width: 95%;
+        height:40%;
+    }
+
+}
+
+@media screen and (min-device-width : 701px) and (max-device-width : 1199px) {
+                
+                div.column{
+                    height: 182%;
+                }
+            
+                div.content{
+                    height: 130%;
+                }
+            
+                div.boxContentFirst{
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: flex-end;
+                    height: 70%;
+                    
+                }
+                        
+                div.boxContentSecond{
+                    height:40%;
+                }
+            
+                div.boxOne{
+                    width: 45%;
+                    height: 20%;
+                    order: 1;
+                }
+            
+                div.boxTwo{
+                   
+                    width: 45%;
+                    height: 20%;
+                    order:2;
+                }
+            
+                div.boxThree{
+                    height: 26%;
+                    width: 95%;
+                    order:3;
+                    background-color: green;
+                }
+            
+                div.boxFor{
+                    width: 45%;
+                    height: 20%;
+                    order:4;
+                }
+            
+                div.boxFive{
+                    width: 45%;
+                    height: 20%;
+                    order:5;
+                  
+                }
+                div.boxSix{
+                    height: 26%;
+                    width: 95%;
+                    order:6;
+                    background-color: green;
+                }
 }
