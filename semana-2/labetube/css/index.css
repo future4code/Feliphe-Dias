@@ -1,3 +1,5 @@
+@import url("indexResponsive.css");
+
 *{
     margin:0;
     padding:0;
@@ -95,10 +97,6 @@ div.video:hover{
     filter:brightness(50%);
 }
 
-.videoLink{
-    height: 70%;
-    margin: 0 0.5%;
-}
 
 section > div video {
     object-fit: fill;    
