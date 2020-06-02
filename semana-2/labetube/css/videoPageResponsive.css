@@ -1,0 +1,48 @@
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+  main  header a {
+        height: 6vw;
+        width: 11vw;
+    }
+
+   header  div input[type="search"]{
+        height: 6vw;
+        width: 35vw;
+    }
+
+    header  div input[type="submit"]{
+        height: 6vw;
+        width: 12vw;
+    }
+
+    section video {
+        height: 56vw;
+    }
+}
+
+@media screen and (min-device-width : 564px) and (max-device-width : 800px) {
+    main  header a {
+        height: 4vw;
+        width: 8vw;
+    }
+
+   header  div input[type="search"]{
+        height: 4vw;
+        width: 37vw;
+    }
+    
+
+    header  div input[type="submit"]{
+        height: 4vw;
+        width: 7vw;
+    }
+
+   main section{
+        width: 100vw;
+    }
+
+    section video {
+        display: block;
+        margin: 0 auto;
+        height: 50vw;
+    }
+}
