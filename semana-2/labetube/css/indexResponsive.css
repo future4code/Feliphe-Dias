@@ -1,0 +1,183 @@
+@media screen and (min-device-width : 320px) and (max-device-width : 420px) {
+   main header{
+        height: 9vw;
+    }
+
+  main header input[type="search"]{
+        width:30vw;
+        height: 5vw;
+    }
+
+    main header input[type="submit"]{
+        height: 5vw;
+        width: 12vw;
+    }
+
+    main section{
+        justify-content: center;
+        height: 10vw;
+    }
+
+  main section > div video {
+        object-fit: fill;
+        width: 26vw;
+        height: 20vw;
+    }
+
+    main section .video {
+        width: 25vw;
+        height: 28vw;
+    }
+
+    div.video:nth-of-type(2)  {
+        order: 4;
+     
+    }
+
+    div.video:nth-of-type(3)  {
+        order: 7;
+        
+    }
+
+    div.video:nth-of-type(4)  {
+        order: 2;
+        
+    }
+
+    div.video:nth-of-type(5)  {
+        order: 5;
+        
+    }
+
+    div.video:nth-of-type(6)  {
+        order: 8;
+        
+    }
+
+    div.video:nth-of-type(7)  {
+        order: 3;
+        
+    }
+
+    div.video:nth-of-type(8)  {
+        order: 6;
+        
+    }
+
+
+    main #videoIcon{
+        flex-flow: column wrap;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    main footer {
+        height: 7vw;
+    }
+}
+
+
+@media screen and (min-device-width : 421px) and (max-device-width : 800px) {
+    main header{
+        height: 6vw;
+    }
+
+    main header input[type="search"] {
+        height: 4vw;
+        width: 38vw;
+    }
+
+    main header input[type="submit"] {
+        height: 3.9vw;
+        width: 9vw;
+    }
+
+    main section{
+        justify-content: center;
+        height: 10vw;
+    }
+
+  main section > div video {
+        object-fit: fill;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    main section .video {
+        width: 25vw;
+        height: 28vw;
+    }
+
+    main section{
+        justify-content: center;
+        height: 10vw;
+    }
+
+  main section > div video {
+        object-fit: fill;
+        width: 26vw;
+        height: 20vw;
+    }
+
+    main section .video {
+        width: 25vw;
+        height: 28vw;
+    }
+
+    div.video:nth-of-type(2)  {
+        order: 3;
+     
+    }
+
+    div.video:nth-of-type(3)  {
+        order: 5;
+        
+    }
+
+    div.video:nth-of-type(4)  {
+        order: 7;
+        
+    }
+
+    div.video:nth-of-type(5)  {
+        order: 2;
+        
+    }
+
+    div.video:nth-of-type(6)  {
+        order: 4;
+        
+    }
+
+    div.video:nth-of-type(7)  {
+        order: 6;
+        
+    }
+
+    div.video:nth-of-type(8)  {
+        order: 8;
+        
+    }
+
+
+    main #videoIcon{
+        flex-flow: column wrap;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    main #videoIcon{
+        flex-flow: column wrap;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+    
+    main footer{
+        height: 5vw;
+    }
+}
