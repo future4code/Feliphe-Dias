@@ -87,9 +87,9 @@ do{
       // verifica o vencedor:
       alert("Suas cartas " + cartasUsuario +" Sua pontuação é " + player_pontos+"\n"+
             "As cartas do computador são" + cartasCpu + " A pontuação do computador é "+cpu_pontos);
-      if(player_pontos < 21) alert("O Usuário ganhou")
-      else if (player_pontos < cpu_pontos && cpu_pontos > 21) alert("\nO Usuário ganhou");
-      else alert("Empate!\nO usuário ganhou!\nO computador ganhou!");
+      if(player_pontos > 21) alert("O Computador ganhou");
+      else if (player_pontos <= 21 && cpu_pontos > 21) alert("\nO Usuário ganhou");
+      else if ( player_pontos == cpu_pontos)alert("Empate!\nO usuário ganhou!\nO computador ganhou!");
       rodadas = true;
       play = confirm("Outra rodada?");
    }
