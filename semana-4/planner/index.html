@@ -10,19 +10,24 @@
 <body>
     <main>
         <header>
-            <form action="" id="mainForm">
-                <input type="text" name="tarefa"  placeholder="Tarefa" id="tarefa" value="">
-                <select name="semana" id="diasDaSemana" form="mainForm">
-                    <option value="0">Segunda</option>
-                    <option value="1">Terça</option>
-                    <option value="2">Quarta</option>
-                    <option value="3">Quinta</option>
-                    <option value="4">Sexta</option>
-                    <option value="5">Sabado</option>
-                    <option value="6">Domingo</option>
-                </select>
-                <input type="button" value="ADICIONAR" onclick="adicionar()">
-            </form>            
+            <div id="form">               
+                <input type="text" name="tarefa"  placeholder="Tarefa" id="tarefa" value="" onchange="adicionar()">
+                <div id="option">
+                    <label for="horas">Horas</label>
+                    <input  name="horas" type="number" min="0" max="23" id="horas" value ="0">
+                    <select name="semana" id="diasDaSemana" form="mainForm">
+                        <option value="0">Segunda</option>
+                        <option value="1">Terça</option>
+                        <option value="2">Quarta</option>
+                        <option value="3">Quinta</option>
+                        <option value="4">Sexta</option>
+                        <option value="5">Sabado</option>
+                        <option value="6">Domingo</option>
+                    </select>
+                    <input type="button" value="ADICIONAR" onclick="adicionar()">
+                    <input type="button" value="limpar" onclick="limpar()">           
+                </div>
+            </div>
         </header>
         <section>
             <div class="diaSemanaLista">
