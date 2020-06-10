@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Planner</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="form">               
+                <input type="text" name="tarefa"  placeholder="Tarefa" id="tarefa" value="" onchange="adicionar()">
+                <div id="option">
+                    <label for="horas">Horas</label>
+                    <input  name="horas" type="number" min="0" max="23" id="horas" value ="0">
+                    <select name="semana" id="diasDaSemana" form="mainForm">
+                        <option value="0">Segunda</option>
+                        <option value="1">Terça</option>
+                        <option value="2">Quarta</option>
+                        <option value="3">Quinta</option>
+                        <option value="4">Sexta</option>
+                        <option value="5">Sabado</option>
+                        <option value="6">Domingo</option>
+                    </select>
+                    <input type="button" value="ADICIONAR" onclick="adicionar()">
+                    <input type="button" value="limpar" onclick="limpar()">           
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="diaSemanaLista">
+                <h3>Segunda</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Terça</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Quarta</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Quinta</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Sexta</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Sabado</h3>
+                <ul></ul>
+            </div>
+            <div class="diaSemanaLista">
+                <h3>Domingo</h3>
+                <ul></ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

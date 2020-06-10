@@ -1,0 +1,23 @@
+@media screen and (min-width: 375px) and (max-width: 667px){
+
+   
+main header {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+}   
+main header #form{
+    display: block;
+}
+
+main header div #tarefa{
+
+    width: 300px;
+}   
+   
+main section{
+       flex-flow: column;
+       justify-content: space-between;
+       
+   }
+}
