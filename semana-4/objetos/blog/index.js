@@ -65,14 +65,13 @@ function cacheInput(inputId){
 
 
 function mostrarTodosOsArtigos(){
-    document.getElementsByTagName("main")[0].style.display = "none";
+    hide();
     previewParagrafo.style.display = "block";
-    document.getElementsByTagName("body")[0].innerHTML += "<button onclick='showAll()'>VOLTAR</button>";
     if( mostrarArtigos.innerHTML == "VER ARTIGOS"){
         for( let i in artigos){
             if(artigos[i].autor !== "") autor = "Autor:";
             else autor = "";
-            document.getElementsByTagName("body")[0].innerHTML += `<div class="artigosVisivel"><br><h2>${artigos[i].titulo}</h2><br><br>
+           previewParagrafo.innerHTML += `<div class="artigosVisivel"><br><h2>${artigos[i].titulo}</h2><br><br>
             ${artigos[i].conteudo}<i><br><br>${autor} ${artigos[i].autor}</i></div>`
 
         }
@@ -101,6 +100,5 @@ function showAll(){
     for ( let i in a){
         a[i].innerHTML="";
     }
-    document.getElementsByTagName("main")[0].style.display = "flex";
 
 }
