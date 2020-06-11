@@ -51,15 +51,15 @@
                 </div>
                 <div>
                     <label for="minValor">Valor Mínimo</label>
-                    <input type="number" id="minValor" value="0" min="0">
+                    <input type="number" id="minValor"  min="0">
                 </div>
                 <div>
                     <label for="maxValor">Valor Máximo</label>
-                    <input type="number" id="maxValor" value="0" min="0">
+                    <input type="number" id="maxValor" min="0">
                 </div>
                 <div>
                     <button id="buttonFiltrar" onclick="consulta()">Filtrar</button>
-                    <button id="buttonLimparFiltros">Limpar Filtros</button>
+                    <button id="buttonLimparFiltros" onclick="limparFiltros()">Limpar Filtros</button>
                 </div>
                 <div>
                     <ul></ul>
@@ -72,7 +72,7 @@
                 <p>Viagem: </p>
                 <p>Pessoais: </p>
                 <p>Outros: </p>
-                <p>Valor Total:</p>
+                <p>Valor Total: </p>
             </div>
     </section>
         

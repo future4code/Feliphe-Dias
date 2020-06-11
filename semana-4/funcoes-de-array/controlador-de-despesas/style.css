@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
+body{
+    height: 100vw;
 }
 
 main{
@@ -17,7 +17,7 @@ main{
 header{
     display: flex;
     justify-content: center;
-    height: 10%;
+    height: 5vw;
     padding: 8px;
     background-color: blue;
 }
@@ -26,7 +26,7 @@ nav{
     display: flex;
     justify-content: center;
     background-color: orange;
-    height: 5%;
+    height: 2vw;
 }
 
 nav > button{
@@ -37,7 +37,7 @@ section{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
+    margin: 16px 0;
     height: 85%;
 }
 
@@ -47,7 +47,7 @@ section{
     justify-content: flex-start;
     border: solid black 1px;
     width: 40%;
-    height: 60%;
+    height: fit-content;
     padding: 16px;
 }
 
@@ -61,7 +61,7 @@ section{
     justify-content: flex-start;
     border: solid black 1px;
     width: 40%;
-    height: 60%;
+    height: fit-content;
     padding: 16px;
 
 }
@@ -76,7 +76,7 @@ section{
     justify-content: flex-start;
     border: solid black 1px;
     width: 40%;
-    height: 60%;
+    height: fit-content;
     padding: 16px;
 }
 
@@ -92,4 +92,8 @@ section{
 
 #consultaSection > div{
     display: block;
+}
+
+li{
+    margin: 16px 0px;
 }
