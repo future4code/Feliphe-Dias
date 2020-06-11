@@ -41,6 +41,7 @@ function consulta(){
         
         })
     } else return alert("Por favor Preencha todos os campos");
+    document.getElementsByTagName("ul")[0].innerHTML = "";
     resultadoConsulta.forEach((despesa, i ,e)=>{
         document.getElementsByTagName("ul")[0].innerHTML += `<li><h3>Despesa:${i}<h3></li>`;
         document.getElementsByTagName("ul")[0].innerHTML += `<li>Tipo:${despesa.tipo}</li>`;
@@ -67,6 +68,7 @@ function showSection(sectionId){
             break;
         case "consultaSection":
             consultaSection.style.display = "flex";
+            gerarLista();
             break;
         case "extratoSection":
             extratoSection.style.display = "flex";
@@ -124,5 +126,15 @@ function gerarExtrato(){
 function limpar(elmnArray){
     elmnArray.forEach((e, i, a)=>{
         e.value = "";
+    })
+}
+
+function gerarLista(){
+    listaDespesas.forEach((despesa, i, a)=>{
+        document.getElementsByTagName("ul")[0].innerHTML += `<li><h3>Despesa:${i}<h3></li>`;
+        document.getElementsByTagName("ul")[0].innerHTML += `<li>Tipo:${despesa.tipo}</li>`;
+        document.getElementsByTagName("ul")[0].innerHTML += `<li>Valor:${despesa.valor}</li>`;
+        document.getElementsByTagName("ul")[0].innerHTML += `<li>Descrição:${despesa.descricao}</li>`;
+
     })
 }
