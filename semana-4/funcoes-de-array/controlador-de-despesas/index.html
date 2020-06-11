@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <title>Controlador</title>
+</head>
+<body>
+    <main>
+        <header><H1>Controlador de Despesas</H1></header>
+        <nav>
+             <button id="buttonMostrarCadastro" onclick="showSection('cadastroSection')">Nova Despesa</button>
+             <button id="buttonMostrarConsulta" onclick="showSection('consultaSection')">Consultar Despesa</button>
+             <button id="buttonMostrarExtrato"onclick="showSection('extratoSection')">Extrato</button>
+        </nav>
+        <section>
+            <div id="cadastroSection">
+                <h2>Cadastrar Despesa:</h2>
+                <div>
+                    <label for="valor">valor:</label>
+                    <input type="number" id="valor" min="0">
+                </div>
+                <div>
+                    <label for="cadastrarSelect">Tipo:(Casa, Viagem, Pessoais, Outros )</label>
+                    <select id="cadastrarSelect">
+                        <option value="casa">Casa</option>
+                        <option value="viagem">Viagem</option>
+                        <option value="pessoais">Pessoais</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao">
+                    <button id="buttonCadastrar" onclick="criarDespesa()">Cadastrar Despesa</button>          
+                </div>
+            </div>
+
+            <div id="consultaSection">
+                <h2>Despesas Detalhadas</h2>
+                <div>
+                    <label for="consultaTipo"></label>
+                    <select id="consultaTipo">
+                        <option value="casa">Casa</option>
+                        <option value="viagem">Viagem</option>
+                        <option value="pessoais">Pessoais</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="minValor">Valor Mínimo</label>
+                    <input type="number" id="minValor" value="0" min="0">
+                </div>
+                <div>
+                    <label for="maxValor">Valor Máximo</label>
+                    <input type="number" id="maxValor" value="0" min="0">
+                </div>
+                <div>
+                    <button id="buttonFiltrar" onclick="consulta()">Filtrar</button>
+                    <button id="buttonLimparFiltros">Limpar Filtros</button>
+                </div>
+                <div>
+                    <ul></ul>
+                </div>
+            </div>
+            
+            <div id="extratoSection">
+                <h2>Extrato</h2>
+                <p>Casa: </p>
+                <p>Viagem: </p>
+                <p>Pessoais: </p>
+                <p>Outros: </p>
+                <p>Valor Total:</p>
+            </div>
+    </section>
+        
+    </main>
+</body>
+</html>
