@@ -233,10 +233,10 @@
 
 //2:
 // //a
-// const array = [1, 2, 3, 4, 5, 6];
+const array = [1, 2, 3, 4, 5, 6];
 // function triplo(a){
 //     a = a.map((n,i,a)=>{
-//         return n*3;
+//         return n*2;
 //     })
 //     return a;
 // }
