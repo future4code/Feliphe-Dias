@@ -144,3 +144,8 @@
 //     console.log("segundo menor", menor);
      
 // }
+
+// let f = function(){
+//     alert("Hello Labenu");
+// }
+// f();
