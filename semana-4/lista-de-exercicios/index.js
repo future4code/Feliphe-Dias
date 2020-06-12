@@ -24,5 +24,15 @@
         console ----- > 165
         alert ----> TIPO DE INVESTIMENTO INFORMADO INCORRETO
 
+      3:
+    Declara um array numeros com 14 elementos do tipo number distintos entre si
+    declara array1 e array2 ambaos vazios
+    intera o array numeros usando o for of
+    se o elemento interado for par adiciona o elemento no array1
+    se nao for par adiciona no array2
 
+    resultado no console/browser:
+        console ---> "quantidade total de números 14"
+        console ----> "6"
+        console ---> "8"
 */
