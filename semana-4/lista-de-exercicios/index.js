@@ -282,3 +282,33 @@ const array = [1, 2, 3, 4, 5, 6];
 //     })
 //     return a;
 // }
+
+//4
+
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ]
+
+// function createEmail(a){
+//     let masculino = a.filter((p, i, a)=>{ return p.genero === "masculino" })
+//     let feminino = a.filter((p, i, a)=>{ return p.genero === "feminino" }) 
+//     let email = [];
+//     masculino.forEach((p, i, a) => {
+//         p.cancelada ? email.push( `Olá, Sr. ${p.nome}. Infelizmente, sua consulta marcada
+//         para o dia ${p.dataDaConsulta} foi cancelada. Se quiser, pode entrar em 
+//         contato conosco para remarcá-la`) : email.push( `Olá, Sr. ${p.nome}. Estamos enviando esta mensagem para
+//         lembrá-lo da sua consulta no dia ${p.dataDaConsulta}. Por favor, acuse
+//         o recebimento deste e-mail`)
+//     });  
+//     feminino.forEach((p, i, a) => {
+//         p.cancelada  ? email.push(`Olá, Sra. ${p.nome}. Infelizmente, sua consulta marcada
+//          para o dia ${p.dataDaConsulta} foi cancelada. Se quiser, pode entrar em 
+//          contato conosco para remarcá-la`) : email.push(`Olá, Sra. ${p.nome}. Estamos enviando esta mensagem para
+//          lembrá-la da sua consulta no dia ${p.dataDaConsulta}. Por favor, acuse
+//          o recebimento deste e-mail`)
+//      });  
+//      return email;
+// }
