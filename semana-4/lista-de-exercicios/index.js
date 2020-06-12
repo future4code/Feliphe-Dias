@@ -232,7 +232,7 @@
 // }
 
 //2:
-// //a
+// //A
 const array = [1, 2, 3, 4, 5, 6];
 // function dobro(a){
 //     a = a.map((n,i,a)=>{
@@ -240,12 +240,18 @@ const array = [1, 2, 3, 4, 5, 6];
 //     })
 //     return a;
 // }
-//b
-function triplo(a){
-    a = a.map((n, i, a)=>{
-        return (n*3).toString();
-    })
-    return a;
-}
+//B
+// function triplo(a){
+//     a = a.map((n, i, a)=>{
+//         return (n*3).toString();
+//     })
+//     return a;
+// }
 
-console.log(triplo(array));
+// C
+// function parImpar(a){
+//     a = a.map((n, i, a)=>{
+//        return  (n%2 === 0) ? `${n} é par` : `${n} é impar`;
+//     })
+//     return a;
+// }
