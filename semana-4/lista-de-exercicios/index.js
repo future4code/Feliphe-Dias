@@ -50,3 +50,22 @@
 
     
 */
+
+// EXERCICIOS DE LOGICA DE PROGRAMAÇÃO
+
+// 1 - for ,for in, for of.
+
+// const lista = [1,2,3,4,5]
+
+// for(let i =0; i < lista.length; i++){
+//     console.log(lista[i]);
+// }
+
+// for( let i in lista){
+//     console.log(lista[i]);
+// }
+
+// for(let i of lista){
+//     console.log(i);
+// }
+ 
