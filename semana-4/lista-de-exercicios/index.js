@@ -68,4 +68,11 @@
 // for(let i of lista){
 //     console.log(i);
 // }
+  
+// 2:
+// A - false
+// B - true
+// C - true
+// d - true
+// e - true
 
