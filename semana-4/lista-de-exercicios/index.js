@@ -173,3 +173,23 @@
 //         area: lado1*lado2
 //     }
 // }
+
+//3:
+let filme = function(nomeDoFilme, ano, diretor, ator){
+    this.nomeDoFilme = nomeDoFilme;
+    this.ano = ano;
+    this.diretor = diretor;
+    this.ator =  ator;
+    this.anuncia = function(){
+        let menssagem ="";
+        for( let i in this.ator){
+             i < Array.length-2 ? menssagem += ator[i] +", " : menssagem += ator[i] +"."
+        } 
+        console.log(`Venha assistir ao filme ${this.nomeDoFilme}, de ${this.ano}, dirigido por ${this.diretor} e estrelado por ${menssagem}`);
+        return; 
+    }
+}
+
+let jango = new filme("haniibal",1929,"qualquer um", ["binino,nersi,aassad,tubarão"]);
+
+jango.anuncia();
