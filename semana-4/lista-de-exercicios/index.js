@@ -87,3 +87,15 @@
 //     console.log(i*2);
 // }
 
+
+// 4:
+// function typeOfTriang(a,b,c){
+//     a = Number(a) || 1;
+//     b = Number(b) || 1;
+//     c = Number(c) || 1;
+//     if( a === b && a === c) return "Equilátero";
+//     else if( a === b || a === c || b === c) return "Isósceles";
+//     else return "Escaleno" 
+// }
+
+
