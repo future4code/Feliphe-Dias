@@ -98,4 +98,16 @@
 //     else return "Escaleno" 
 // }
 
-
+// 5:
+// function ex5(n1,n2){
+//     n1 = Number(n1) || 0
+//     n2 = Number(n2) || 0
+//     console.log(`Entrada:\n${n1} e ${n2}\n\nSAÍDA:\n`);
+//     if( n1 > n2) console.log(`O maior é: ${n1}`);
+//     else console.log(`O maior é: ${n2}`);
+//     if( n1%2 === 0) console.log(`${n1} é divisível por ${n2}`);
+//     else console.log(`${n1} não é divisível por ${n2}`);
+//     if( n2%2 == 0) console.log(`${n2} é divisível por ${n1}`);
+//     else console.log(`${n2} não é divisível por ${n1}`);
+//     (n1-n2) < 0 ? console.log(`A diferença entre eles é ${(n1-n2)*-1}`) : console.log(`A diferença entre eles é ${(n1-n2)}`)  
+// }
