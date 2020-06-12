@@ -160,3 +160,16 @@
     Objetos são ideias quando o codigo necessita ser reutilizado, ex: a representação de um cadastro de um cliente e todas as coisas que um cliente pode fazer.
     Os arrays quando trabalhamos com dados mais brutos que só representem valores e não funções( metodos).
 */
+
+// 2:
+// function criarRetangulo(lado1,lado2){
+//     lado1 = Number(lado1) || 0;
+//     lado2 = Number(lado2) || 0;
+
+//     return {
+//         largura: lado1,
+//         altura: lado2,
+//         perimetro: 2*(lado1+lado2),
+//         area: lado1*lado2
+//     }
+// }
