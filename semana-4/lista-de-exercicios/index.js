@@ -208,3 +208,17 @@
 // let pedro = new pessoa("Pedro",24,"aaa@qualquercosia.com","rua das pitancas");
 // console.log(pedro);
 // console.log(pedro.anonimizarPessoa());
+
+
+//EXERCICIOS DE FUNÇÕES DE ARRAY
+
+// 1:
+ const array = [{ nome: "Pedro", idade: 20 },{ nome: "João", idade: 10 },{ nome: "Paula", idade: 12 },{ nome: "Artur", idade: 89 }]
+
+// function adultos(array){
+//   let adultos =  array.filter((pessoa, i , a)=>{
+//         return pessoa.idade >= 20;
+//     })
+//     return adultos;
+// }
+
