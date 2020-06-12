@@ -149,3 +149,14 @@
 //     alert("Hello Labenu");
 // }
 // f();
+
+//EXERCICIOS DE OBJETOS
+
+/* 
+1:
+    Objetos são formas de representar dados mais próxima da nossa realidade, uma maniera até mais "organica de representação".
+    Os objetos facilitam a reutilização de codigo. você não precisa saber como é feito cada obejeto só conhecer os metodos e propriedades dele.
+    Os arrays são estruturas de dados como um vetor.  ele nos permite armazenar elementos dentro dele, cada elemento possui um index que vai de n0,n1,n...
+    Objetos são ideias quando o codigo necessita ser reutilizado, ex: a representação de um cadastro de um cliente e todas as coisas que um cliente pode fazer.
+    Os arrays quando trabalhamos com dados mais brutos que só representem valores e não funções( metodos).
+*/
