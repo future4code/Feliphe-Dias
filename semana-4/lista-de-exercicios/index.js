@@ -111,3 +111,36 @@
 //     else console.log(`${n2} não é divisível por ${n1}`);
 //     (n1-n2) < 0 ? console.log(`A diferença entre eles é ${(n1-n2)*-1}`) : console.log(`A diferença entre eles é ${(n1-n2)}`)  
 // }
+
+
+//EXERCICIOS DE FUNÇÕES
+
+// 1:
+
+// let array = [200,300,3,10,-100,400] 
+
+// function menorMaior(a){
+     
+//      let menor = Infinity;
+//      let maior = 0;
+//      let newArray = [];
+     
+//      for(let i of a){
+//          if( i < menor) menor = i;
+//          if(i > maior) maior = i;
+//      }
+     
+//      a.splice(a.indexOf(maior));
+//      a.splice(a.indexOf(menor));
+    
+//      menor = Infinity;
+//      maior = 0;
+
+//      for(let i of a){
+//         if( i < menor) menor = i;
+//         if(i > maior) maior = i;
+//     }
+//     console.log("segundo maior", maior);
+//     console.log("segundo menor", menor);
+     
+// }
