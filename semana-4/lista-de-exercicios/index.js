@@ -255,3 +255,30 @@ const array = [1, 2, 3, 4, 5, 6];
 //     })
 //     return a;
 // }
+
+// //3:
+// const pessoas = [
+// 	{ nome: "Paula", idade: 12, altura: 1.8},
+// 	{ nome: "João", idade: 20, altura: 1.3},
+// 	{ nome: "Pedro", idade: 15, altura: 1.9},
+// 	{ nome: "Luciano", idade: 22, altura: 1.8},
+// 	{ nome: "Artur", idade: 10, altura: 1.2},
+// 	{ nome: "Soter", idade: 70, altura: 1.9}
+// ]
+// // A
+// function isElegible(a){
+//     a = a.filter((p, i ,a)=>{
+//         return p.idade > 14 && p.idade < 60;
+//     }).filter((p, a, i)=>{
+//         return p.altura >= 1.5;
+//     })
+//     return a;
+// }
+
+// //B
+// function isNotElegible(a){
+//     a = a.filter((p, i, a)=>{
+//         return !isElegible(a).includes(p);
+//     })
+//     return a;
+// }
