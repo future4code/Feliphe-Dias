@@ -193,3 +193,18 @@
 // let jango = new filme("haniibal",1929,"qualquer um", ["binino,nersi,aassad,tubarão"]);
 
 // jango.anuncia();
+
+// 4:
+// let pessoa = function(nome,idade,email,endereco){
+//     this.nome = nome;
+//     this.idade = idade;
+//     this.email = email;
+//     this.endereco = endereco;
+//     this.anonimizarPessoa = function(){
+//         return new pessoa("ANÔNIMO",this.idade,this.email,this.endereco);
+//     }
+// }
+
+// let pedro = new pessoa("Pedro",24,"aaa@qualquercosia.com","rua das pitancas");
+// console.log(pedro);
+// console.log(pedro.anonimizarPessoa());
