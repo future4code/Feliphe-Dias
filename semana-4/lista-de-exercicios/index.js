@@ -76,3 +76,14 @@
 // d - true
 // e - true
 
+// 3:   Não. O valor de quantidadeDeNUmerosPares é undefined
+// e o loop while não tem nenhuma operação que satisfaça a condição
+// por isso ficara em um loop infinito imprimindo no console "0"
+
+// correção da implementação
+// const quantidadeDeNUmerosPares = Number(prompt("Digite um numero")) || 0;
+
+// for( let i = 0; i < quantidadeDeNUmerosPares; i++){
+//     console.log(i*2);
+// }
+
