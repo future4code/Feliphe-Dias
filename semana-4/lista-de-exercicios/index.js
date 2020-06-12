@@ -35,4 +35,18 @@
         console ---> "quantidade total de números 14"
         console ----> "6"
         console ---> "8"
+
+   4:
+    declara um array numeros com 25 elementos do tipo number distintos entre si
+    declara duas variaveis numero1 e numero2 a primeira valendo Infitity(infinito)
+    e a segunda 0
+    percorre o array numero com um for of e para cada elemento dele 
+    menor que numero1 a variavel numero1 recebe o valor do elemento autalmente interado
+    e para cada elemento menor que a variavel numero dois é atribuido a ela o valor do elemento interado.
+    
+    resultado no console/browser:
+        console ----> "-10"
+        console ----> "1590"
+
+    
 */
