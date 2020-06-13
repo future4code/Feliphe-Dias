@@ -117,7 +117,7 @@
 
 // 1:
 
-// let array = [200,300,3,10,-100,400] 
+// let array1 = [200,300,101,500000,-100,400,999,1345] 
 
 // function menorMaior(a){
      
@@ -129,9 +129,12 @@
 //          if( i < menor) menor = i;
 //          if(i > maior) maior = i;
 //      }
-     
-//      a.splice(a.indexOf(maior));
-//      a.splice(a.indexOf(menor));
+//     a = a.filter((e, i, a)=>{
+//         return e !== menor
+//     }).filter((e, i, a)=>{
+//         return e !== maior
+//     })
+
     
 //      menor = Infinity;
 //      maior = 0;
@@ -144,6 +147,7 @@
 //     console.log("segundo menor", menor);
      
 // }
+// menorMaior(array1);
 
 // let f = function(){
 //     alert("Hello Labenu");
@@ -233,7 +237,7 @@
 
 //2:
 // //A
-const array = [1, 2, 3, 4, 5, 6];
+// const array = [1, 2, 3, 4, 5, 6];
 // function dobro(a){
 //     a = a.map((n,i,a)=>{
 //         return n*2;
