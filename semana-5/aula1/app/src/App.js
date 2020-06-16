@@ -22,7 +22,7 @@ function App() {
                 <li className="botoes-meunu-vertical">Originais</li>
                 <li className="botoes-meunu-vertical">Histórico</li>
             </ul>
-        </nav>
+           </nav>
         
         <section className="painel-de-videos">
             <div className="box-pagina-principal media1" onClick={reproduzVideo}>
