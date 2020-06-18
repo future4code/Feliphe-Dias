@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vw;
+}
+
+main{
+    display:flex;
+    flex-flow: column wrap;
+    height: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height: 5vw;
+    padding: 8px;
+    background-color: blue;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    height: 2vw;
+}
+
+nav > button{
+    margin-left: 4px;
+}
+
+section{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 16px 0;
+    height: 85%;
+}
+
+#cadastroSection{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: solid black 1px;
+    width: 40%;
+    height: fit-content;
+    padding: 16px;
+}
+
+#cadastroSection > div{
+    margin: 8px 2px;
+}
+
+#consultaSection{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: solid black 1px;
+    width: 40%;
+    height: fit-content;
+    padding: 16px;
+
+}
+
+#consultaSection > div{
+    margin: 8px 2px;
+}
+
+#extratoSection{
+    display:none;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: solid black 1px;
+    width: 40%;
+    height: fit-content;
+    padding: 16px;
+}
+
+#extratoSection h2{
+    margin: 8px;
+
+}
+
+#extratoSection p{
+    margin: 8px;
+    
+}
+
+#consultaSection > div{
+    display: block;
+}
+
+li{
+    margin: 16px 0px;
+}
