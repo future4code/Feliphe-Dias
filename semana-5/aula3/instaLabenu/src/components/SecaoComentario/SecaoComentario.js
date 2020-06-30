@@ -20,8 +20,9 @@ export class SecaoComentario extends Component {
 		this.setState({comentario: event.target.value});
 	}
 	onClickAddComentario = () => {
+
 		const newComentario = [...this.state.listaComentarios, this.state.comentario]
-		this.setState({listaComentarios: newComentario})
+		this.setState({listaComentarios: newComentario, comentario: ""})
 	}
 
 	render() {
