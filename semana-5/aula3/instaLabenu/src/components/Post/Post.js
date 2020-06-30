@@ -11,17 +11,51 @@ import iconeSavePostPreto from "../../img/salvar-black.png"
 import iconeSavePostBranco from "../../img/salvar-white.png"
 import iconeShare from "../../img/share.png"
 import SharePoPUp from '../sharePopUp/SharePoPUp'
+import styled from "styled-components";
 
+const Post_Container = styled.div`
+    border: 1px solid gray;
+    width: 300px;
+    margin-bottom: 10px;
+`;
+
+const PostHeader = styled.div`
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+`;
+
+const PostFooter = styled.div`
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+`;
+
+const UserPhoto = styled.img`
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+`;
+
+const PostPhoto = styled.img`
+   width: 100%;
+`;
 
 class Post extends React.Component {
   state = {
     curtido: false,
     numeroCurtidas: 0,
     comentando: false,
+    comentarios: "",
     numeroComentarios: 0,
     salvo: false,
     share: false
   }
+
 
   onClickCurtida = () => {
     this.setState({curtido: !this.state.curtido});
@@ -47,7 +81,6 @@ class Post extends React.Component {
 
   share = () =>{ 
      !this.state.share ? this.setState({share: true}) : this.setState({share: false})
-     console.log(this.state.share)
   }
 
   render() {
@@ -71,15 +104,15 @@ class Post extends React.Component {
       componenteShare = <SharePoPUp />
     }
 
-    return <div className={'post-container'}>
-      <div className={'post-header'}>
-        <img className={'user-photo'} src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
+    return <Post_Container>
+      <PostHeader>
+        <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
         <p>{this.props.nomeUsuario}</p>
-      </div>
+      </PostHeader>
 
-      <img className={'post-photo'} src={this.props.fotoPost} alt={'Imagem do post'}/>
+      <PostPhoto src={this.props.fotoPost} alt={'Imagem do post'}/>
 
-      <div className={'post-footer'}>
+      <PostFooter>
         <IconeComContador
           icone={iconeCurtida}
           onClickIcone={this.onClickCurtida}
@@ -106,10 +139,11 @@ class Post extends React.Component {
           onClickIcone={this.onClickComentario}
           valorContador={this.state.numeroComentarios}
         />
-      </div>
+      </PostFooter>
       {componenteShare}
+
       {componenteComentario}
-    </div>
+    </Post_Container>
   }
 }
 
