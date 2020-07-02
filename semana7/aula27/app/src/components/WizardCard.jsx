@@ -19,7 +19,7 @@ const WizardImg = styled.img`
 const WizardInfo = styled.div`
     display: flex;
     flex-flow: column wrap;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 70%;
 `;
 
@@ -51,17 +51,17 @@ class WizardCard extends React.Component{
     render(){
         return <Card>
             <WizardImg src={human}/>
-    <WizardInfo>{this.state.characters.map( character =>{
-        return <div key={character.id}>
-                <Info><strong>Name: </strong>{character.name}</Info>
-                <Info><strong>Role: </strong>{character.role}</Info>
-                <Info><strong>School: </strong>{character.school}</Info>
-                {character.house && <Info><strong>House: </strong>{character.house}</Info>}
-                <Info><strong>Blood Status: </strong>{character.bloodStatus}</Info>
-                <Info><strong>Species: </strong>{character.species}</Info>
+    <WizardInfo>
+        <div key={this.props.wizardsList.id}>
+                <Info><strong>Name: </strong>{this.props.wizardsList.name}</Info>
+                <Info><strong>Role: </strong>{this.props.wizardsList.role}</Info>
+                <Info><strong>School: </strong>{this.props.wizardsList.school}</Info>
+                {this.props.wizardsList.house && <Info><strong>House: </strong>{this.props.wizardsList.house}</Info>}
+                <Info><strong>Blood Status: </strong>{this.props.wizardsList.bloodStatus}</Info>
+                <Info><strong>Species: </strong>{this.props.wizardsList.species}</Info>
 
             </div>
-    })}</WizardInfo>
+   </WizardInfo>
         </Card>
     }
 }

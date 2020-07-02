@@ -35,14 +35,18 @@ class House extends React.Component{
     }
 
     onChangeInput = event =>{
-        this.setState({wizardName: event.target.value});
+        const wizard = this.props.characters.find( wizard =>{
+            return wizard.name === event.target.value
+        })
+        wizard && this.setState({wizardName: wizard})
     }
 
-    render(){
+
+    render(){       
         return <Container>
             <MyHeader><button onClick={() => this.props.handlePage(0)}>Voltar</button>{this.props.title}</MyHeader>
             <MyLabel>Wizard: <input type="text" onChange={this.onChangeInput}/></MyLabel>
-            <WizardCard/>
+            <WizardCard wizardsList={this.state.wizardName}/>
         </Container>
     }
 }

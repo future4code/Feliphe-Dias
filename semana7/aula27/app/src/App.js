@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from "axios";
 import Home from './components/Home';
 import House from "./components/House";
 import styled from "styled-components";
@@ -12,51 +13,21 @@ const Container = styled.div`
 class App extends React.Component{
   state ={
     page: 0,
-     characters: [
-      {
-          "_id": "5a0fa4daae5bc100213c232e",
-          "name": "Hannah Abbott",
-          "role": "student",
-          "house": "Hufflepuff",
-          "school": "Hogwarts School of Witchcraft and Wizardry",
-          "__v": 0,
-          "ministryOfMagic": false,
-          "orderOfThePhoenix": false,
-          "dumbledoresArmy": true,
-          "deathEater": false,
-          "bloodStatus": "half-blood",
-          "species": "human"
-      },
-      {
-          "_id": "5a0fa54aae5bc100213c232f",
-          "name": "Bathsheda Babbling",
-          "role": "Professor, Ancient Runes",
-          "school": "Hogwarts School of Witchcraft and Wizardry",
-          "__v": 0,
-          "ministryOfMagic": false,
-          "orderOfThePhoenix": false,
-          "dumbledoresArmy": true,
-          "deathEater": false,
-          "bloodStatus": "unknown",
-          "species": "human"
-      },
-      {
-          "_id": "5a0fa5deae5bc100213c2330",
-          "name": "Ludo Bagman",
-          "role": "Head, Department of Magical Games and Sports",
-          "__v": 0,
-          "ministryOfMagic": true,
-          "orderOfThePhoenix": false,
-          "dumbledoresArmy": false,
-          "deathEater": false,
-          "bloodStatus": "unknown",
-          "species": "human"
-      }
-     ]
+     characters: ""
+  }
+  
+  componentDidMount(){
+    this.getAllWizard();
   }
 
-  componentDidMount(){
-    localStorage.getItem("Wizard") && this.setState({wizard: })
+  getAllWizard = () =>{
+   const url ="https://www.potterapi.com/v1/characters?key=$2a$10$kOGiXdkDxu0ZtUr2UssV8erLFx2mUPQUnjy.QGNJppx6lPzcRUOcO"
+   axios
+     .get(url)
+     .then( response =>{
+       this.setState({characters: response.data})
+     }) 
+     .catch(err => console.log(err.menssage))
   }
 
   changePage = (pageNumber) =>{
@@ -70,19 +41,19 @@ class App extends React.Component{
         page = <Home handlePage={this.changePage}/>;
         break;
       case 1: 
-        page = <House title={"Ravenclaw"} handlePage={this.changePage}/>;
+        page = <House title={"Ravenclaw"} characters={this.state.characters} handlePage={this.changePage}/>;
         break;
       case 2: 
-        page = <House title={"Hufflepuff"} handlePage={this.changePage}/>;
+        page = <House title={"Hufflepuff"} characters={this.state.characters} handlePage={this.changePage}/>;
         break;
       case 3: 
-        page = <House title={"Gryffindor"} handlePage={this.changePage}/>;
+        page = <House title={"Gryffindor"} characters={this.state.characters} handlePage={this.changePage}/>;
         break;
       case 4: 
-        page = <House title={"Slytherin"} handlePage={this.changePage}/>;
+        page = <House title={"Slytherin"} characters={this.state.characters} handlePage={this.changePage}/>;
         break;
     }
-   
+   console.log(this.state.characters)
     return <Container>
       {page}
     </Container> 

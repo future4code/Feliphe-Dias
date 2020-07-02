@@ -13,9 +13,7 @@ const HouseImage = styled.img`
     margin: 0 auto;
 `
 
-export default props =>{
-
-    
+export default props =>{    
     return <Container>
         <HouseImage src={housesImage} useMap="#workmap" />
         <map name="workmap">
