@@ -3,6 +3,7 @@ import SingUpPage from "./components/SingUpPage"
 import axios from "axios"
 import styled from "styled-components"
 import UserListPage from "./components/UserListPage";
+import UserDetails from "./components/UserDetails"
 
 const Contaier = styled.div`
     display: flex;
@@ -15,7 +16,7 @@ const Contaier = styled.div`
 
 class App extends React.Component{
     state = {
-        isSignUp: true,
+        UserByid: "",
         inputNameValue: "",
         inputEmailValue: "",
         users: []
@@ -59,6 +60,36 @@ class App extends React.Component{
         this.setState({inputEmailValue: event.target.value})
     }
 
+    getUserById = (id) =>{
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:${this.props.id}`
+        const authorization = { headers:{Authorization: "feliphe-rodrigues-turing"}}
+        axios
+        .get(url,authorization)
+        .then( response => this.setState({UserByid: response.data}))
+        .catch( err => console.log(err.menssage))
+    }
+
+
+    renderiza = (page) =>{
+        switch(page){
+            case 0:
+                return <SingUpPage
+                        handleInputName={this.onChangeInputName}
+                        handleInputEmail={this.onChangeInputEmail}
+                        inputEmailValue={this.state.inputEmailValue}
+                        inputNameValue={this.state.inputNameValue}
+                />
+            case 1:
+                {this.getAllUsers()}
+                return <UserListPage  
+                        users={this.state.users}
+                        handleClick={this.getUserById}
+                />
+            case 2:
+                return <UserDetails user={this.UserByid}/>
+        }
+    }
+
     send = () =>{
        
         if(this.state.inputNameValue !== "" && this.state.inputEmailValue !== ""){
@@ -82,11 +113,7 @@ class App extends React.Component{
         
         return (
             <Contaier>
-                {this.state.isSignUp ? 
-                <button onClick={() => this.setState({isSignUp: !this.state.isSignUp}, 
-                this.getAllUsers())}>Consultar</button> : 
-                <button onClick={() => this.setState({isSignUp: !this.state.isSignUp})}>Voltar</button>}
-                {this.state.isSignUp ? screenSingUp : screenList }
+                {this.renderiza(0)}
             </Contaier>
         );
     }

@@ -42,24 +42,12 @@ class UserListPage extends React.Component{
             .catch(error => alert(error.message))
         }
     }
-    
-
-
-    changePage = (id) => {
-        const page = <UserDetails 
-        id={id}
-        />
-        this.setState({page: page, changePage: true})
-    
-    }
-
-
 
     render(){
          const pageLista =  <ContainerList>
          {this.props.users && this.props.users.map( user => {
             return <ListDiv>
-                 <li onClick={ () => this.changePage(user.id)} key={user.id}>{user.name}</li>
+                 <li onClick={ () => this.props.handleClick(user.id)} key={user.id}>{user.name}</li>
                <button  onClick={() => this.deleteUser(user.id)}>apagar</button>
              </ListDiv>
           }
