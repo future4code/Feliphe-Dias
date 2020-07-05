@@ -3,23 +3,21 @@ import styled from "styled-components";
 
 const ContainerPlayer = styled.div`
     display:flex;
-    height: 100vh;
+    align-self: flex-end;
+    height: 91vh;
 `;
 
 
-class PlayerControls extends React.Component{
-
-
-    render(){
-        
-        return <ContainerPlayer>
+export default props =>{
+    
+    return (
+       props.songUrl ? <ContainerPlayer>
             <audio controls="controls">
-                <source src={"http://spoti4.future4.com.br/1.mp3"} type="audio/mpeg"/>
-                <button onClick={this.addTrackToPlayList}>ADD TO PLAYLIST</button>
+                <source src={props.songUrl} type="audio/mpeg"/>
             </audio>
-        </ContainerPlayer> 
+        </ContainerPlayer> : <div>No Song</div> 
 
-    }
+    );
+
 }
 
-export default PlayerControls;

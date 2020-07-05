@@ -3,14 +3,14 @@ import styled from "styled-components";
 import LandingPage from "./components/LandingPage";
 import Player from "./components/Player";
 
+
 const Container = styled.div`
     display: flex;
+    flex-direction: column;
     color: white;
     height: 100vh;
-    background-color: #4D4E4F;
+    background-color: #2E2E2E;
 `;
-
-
 
 class App extends React.Component{
     state ={
