@@ -36,7 +36,7 @@ class House extends React.Component{
 
     onChangeInput = event =>{
         const wizard = this.props.characters.find( wizard =>{
-            return wizard.name === event.target.value
+            return wizard.name.toLowCase() === event.target.value.toLowCase()
         })
         wizard && this.setState({wizardName: wizard})
     }
