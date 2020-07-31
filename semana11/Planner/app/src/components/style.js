@@ -132,3 +132,8 @@ export const DialogTitle = styled.div`
         font-size: 2ch;
         
 `
+
+export const IdGambiarra = styled.div`
+        display: none;
+        
+`

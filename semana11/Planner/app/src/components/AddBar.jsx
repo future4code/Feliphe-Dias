@@ -19,9 +19,9 @@ export default props =>{
                 type={'text'}
                 min={4}          
                 />
-            <select onChange={onChange} name={'day'}  required={true} >
+            <select data-testid='daySelect' onChange={onChange} name={'day'}  required={true} >
                 <option value=''></option>
-                <option value='segunda'>Segunda</option>
+                <option data-testid='segunda' value='segunda'>Segunda</option>
                 <option value='terca'>Terça</option>
                 <option value='quarta'>Quarta</option>
                 <option value='quinta'>Quinta</option>

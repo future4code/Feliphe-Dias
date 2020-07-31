@@ -96,7 +96,6 @@ function App(){
   }
 
   const deleteTask = id => {
-    if (window.confirm("Deseja deletar ?")){
       axios
       .delete(`${url}/${id}`)
       .then(response => {
@@ -105,8 +104,6 @@ function App(){
       })
       .catch( err => setDeleteSuccess( false ) )
       
-    }
-
 }
 
   return (
@@ -119,6 +116,7 @@ function App(){
         <div className={classes.content} elevation={0}>
           {console.log(task)}
           {!erro  ? <Card 
+                      
                       task={task} 
                       deleteTask={deleteTask}  
                       editTask={editTask}

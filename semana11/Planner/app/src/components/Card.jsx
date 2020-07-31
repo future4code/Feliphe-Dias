@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import {Card, CellHeader, DayColumn, Cell, CardContent} from './style' 
+import {Card, CellHeader, DayColumn, Cell, CardContent, IdGambiarra} from './style' 
 
 import { Collapse, IconButton } from '@material-ui/core';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
@@ -35,6 +35,7 @@ const useStyles = makeStyles({
 export default props =>{
     const {task, deleteTask, editTask, form, onChange, openEdit, setOpenEdit} = props;
     const [showMenu, setShowMenu] = useState();
+    let id = null;
     const classes = useStyles();
     const segunda = task.filter( e => e.day === "segunda") || [];
     const terca = task.filter( e => e.day === "terca") || [];
@@ -46,22 +47,24 @@ export default props =>{
   
 
 
-    return <Card>
+    return <Card data-testid="card-tarefas">
         <CardContent>
             <DayColumn>
                 <CellHeader>Segunda</CellHeader>
-                {segunda.map( e=> <>
+                {segunda.map( e => <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
+                <IdGambiarra>
+                    {id = e.id}
+                </IdGambiarra>
                 </>
                 )}
             </DayColumn>
@@ -70,15 +73,14 @@ export default props =>{
                 {terca.map( e=> <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={ () => deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon />
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
                 </>
                 )}
             </DayColumn>
@@ -87,15 +89,17 @@ export default props =>{
                 {quarta.map( e=> <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                 {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
+                <IdGambiarra>
+                    {id = e.id}
+                </IdGambiarra>
                 </>
                 )}
             </DayColumn>
@@ -104,32 +108,34 @@ export default props =>{
                 {quinta.map( e=> <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
-                </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}                 
+                </Cell>               
                 </>
                 )}
             </DayColumn>
             <DayColumn>
                 <CellHeader>Sexta</CellHeader>
                 {sexta.map( e=> <>
+                
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
+                <IdGambiarra>
+                    {id = e.id}
+                </IdGambiarra>
                 </>
                 )}
             </DayColumn>
@@ -138,15 +144,17 @@ export default props =>{
                 {sabado.map( e=> <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
+                <IdGambiarra>
+                    {id = e.id}
+                </IdGambiarra>
                 </>
                 )}
             </DayColumn>
@@ -155,17 +163,20 @@ export default props =>{
                 {domingo.map( e=> <>
                 <Cell onClick={() => setShowMenu(!showMenu)}>{e.text}
                     <Collapse in={showMenu} className={classes.menu}>
-                        <IconButton onClick={() =>deleteTask(e.id)}>
+                        <IconButton data-testid="icon-delete" onClick={() =>deleteTask(e.id)}>
                             <DeleteOutlineIcon/>
                         </IconButton>
-                        <IconButton onClick={ () => setOpenEdit(true)}>
+                        <IconButton data-testid="icon-edit" onClick={ () => setOpenEdit(true)}>
                             <EditIcon/>
                         </IconButton>
                     </Collapse>
                 </Cell>
-                {openEdit && <Dialog id={e.id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}  
+                <IdGambiarra>
+                    {id = e.id}
+                </IdGambiarra>
                 </>
                 )}
+                {openEdit && <Dialog id={id} setOpenEdit={setOpenEdit} editTask={editTask} form={form} onChange={onChange}/>}
             </DayColumn>
         </CardContent>
     </Card>
