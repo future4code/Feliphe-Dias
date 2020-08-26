@@ -1,0 +1,16 @@
+{
+  "name": "exercicios_quarta",
+  "version": "1.0.0",
+  "description": "criação de um calendário",
+  "main": "index.js",
+  "scripts": {
+    "newEvent": "clear && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.6.0",
+    "moment": "^2.27.0"
+  }
+}
