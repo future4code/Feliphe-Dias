@@ -8,9 +8,6 @@ class A {
  */
 
  // B somente 1;
- type Transaction = {
-
- }
 
  class UserAccount {
     private cpf: string;
@@ -34,4 +31,54 @@ class A {
   const BrownAccount = new UserAccount('111235546','Brown', 1111);
 
   // C: Só conseguimos ter acesso a elas atráves de metodos da classe (setters, getters).
-   
+
+  // 2:
+  class Transaction{
+    private date: string;
+    private valor: number;
+    private description: string;
+
+    public getDate() : string{
+        return this.date;
+    }
+
+    public getValor() : number {
+        return this.valor;
+    }
+
+    public getDescription() : string{
+        return this.description
+    }
+
+    public setDate(date: string) : void{
+        this.date = date;
+    }
+
+    public setValor(valor: number) : void{
+         this.valor = valor ;
+    }
+    
+    public setDescription(description: string) : void{
+        this.description = description
+    }
+
+}
+
+// 3
+class JSONFileManager{
+    constructor(fileName: string){
+
+    }
+};
+
+class Bank{
+    private accounts: UserAccount[];
+    private fileManager: JSONFileManager;
+
+    constructor(accounts: UserAccount[], fileManager: JSONFileManager) {
+        this.accounts = accounts;
+        this.fileManager = new JSONFileManager("data.json")
+    }
+
+    getAccounts() : {}
+}
