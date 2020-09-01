@@ -1,0 +1,12 @@
+{
+  "name": "exercicios",
+  "version": "1.0.0",
+  "description": "exercios de ter",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ./build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "feliphe",
+  "license": "ISC"
+}
