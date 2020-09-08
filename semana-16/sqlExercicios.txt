@@ -1,0 +1,103 @@
+####Exercicios 1
+
+######A:
+
+Os CREATE TABLE criam uma nova trabela. VARCHAR, DATE. FLOAT indicam o tipo de dado.
+NOT NULL indica que o dado não pode ser nulo.
+
+
+######B:
+
+SHOW DATABASES listas todos os bancos de dados (schemas ) disponiveis
+SHOW TABLES lista todas as tabelas do banco de dados selecionado
+
+
+######C:
+
+O comando SHOW só deve ser utilizado para mostrar todas as tabelas ou banco de dados.
+
+
+####Exercício 2:
+
+
+######A:
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+
+VALUES(
+  
+	"002", 
+  
+	"Glória Pires",
+  
+	1200000,
+  
+	"1963-08-23", 
+
+	"female"
+);
+
+######B:
+
+
+O erro foi causado pois os id são identicos que para o banco de dados significa que os dados são identicos.
+
+
+######C:
+
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "003", 
+  "Fernanda Montenegro",
+  300000,
+  "1929-10-19", 
+  "female"
+);
+
+
+######D:
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "004",
+  "Actor 2",	
+  400000,
+  "1949-04-18", 
+  "male"
+);
+
+######E:
+
+INSERT INTO Actor (id, name, salary, birth_date, gender)
+VALUES(
+  "005", 
+  "Juliana Paes",
+  719333.33,
+  "1979-03-26", 
+  "female"
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
