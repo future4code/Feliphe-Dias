@@ -1,0 +1,12 @@
+###Exercícios 1:
+
+####1: 
+
+<h6>A:</h6>
+<p>Ao usarmos o raw o response vem como um array.</p>
+
+<h6>B:</h6>
+<p>Ao usarmos o raw o response vem como um array.</p>
+
+<h6>A:</h6>
+<p>Ao usarmos o raw o response vem como um array.</p>
