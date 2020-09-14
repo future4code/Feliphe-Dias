@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import userDataBase from "./userDatabe";
 import idHandle from "./IdHandle";
+import tokenHandle from "./tokenHadle";
 
 
 dotenv.config();
@@ -19,5 +20,6 @@ const server = app.listen(process.env.PORT || 3000, () => {
   }
 });
 
-const myDb = new userDataBase();
+
+app.put('/sigup',)
 
