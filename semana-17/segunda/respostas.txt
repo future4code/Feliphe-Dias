@@ -1,0 +1,49 @@
+<h4>1.</h4>
+
+<h4>A. Qual a sua opinião em relação a usar strings para representar os ids? Você concorda que seja melhor do que usar números?</h4>
+<p>
+    R: Acho muito mais eficiente e seguro pois nos permite evitar uma variedade de combinações MUITO maiores.
+</p>
+
+
+<h4>B.</h4>
+<p>
+    /*
+class idHandle{
+    public generate(): string {
+        return v4();
+    }
+}
+    */
+</p>
+
+<h4>2.</h4>
+
+<h4>A. Explique o código acima com as suas palavras.</h4>
+<p>
+    Esse código cria um conexção com o banco de dados e um metodo createUsaer
+    que insere um novo usuário na tabela "User"
+</p>
+<h4>B.</h4>
+<p>
+   CREATE TABLE USERS(
+	id VARCHAR(255) NOT NULL UNIQUE PRIMARY KEY,
+	email VARCHAR(255) NOT NULL UNIQUE,
+	password VARCHAR(255) NOT NULL
+)
+</p>
+
+
+<h4>C.</h4>
+<p>
+   async createUser(id: string, email: string, password: string){
+     await this.getConnection()
+    .insert({id, email, password}).into(table);
+     
+    }
+</p>
+
+<h4>D.</h4>
+
+
+<h4>3.</h4>
