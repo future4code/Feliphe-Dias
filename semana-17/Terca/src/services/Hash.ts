@@ -1,0 +1,21 @@
+import * as bcrypt from 'bcryptjs';
+import env from 'dotenv';
+
+
+env.config();
+
+
+export default class HashManager{
+    
+    public static async generate(s: string): Promise<string>{
+        const rounds = Number(process.env.BCRYPT_COST);
+        const salt = await bcrypt.genSalt(rounds);
+        const result = await bcrypt.hash(s, salt);
+        return result
+    }
+
+    public static async compare(s: string, hash: string): Promise<boolean>{
+        return await bcrypt.compare(s, hash);
+    }
+
+}
